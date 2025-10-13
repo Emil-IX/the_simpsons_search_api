@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import logo from '../assets/The_Simpsons_yellow_logo.svg'
 
 
 export default function TheSimpson() {
@@ -61,7 +62,9 @@ export default function TheSimpson() {
   return (
     <>
       <main>
-      <div className="tittle">The Simpson</div>
+      <div className="tittle">
+        <img src={logo} alt="The Simpson Logo" className="logo" />
+      </div>
         <div className="searchContainer">
           <label htmlFor="search" >Search</label>
           <input
@@ -95,7 +98,7 @@ export default function TheSimpson() {
             name="before"
             onClick={() => paginationButton('before')}
           >←</button>
-          <p>{charater}</p>
+          <p className="pageNumber">{charater}</p>
           <button
             name="after"
             onClick={() => paginationButton('after')}
