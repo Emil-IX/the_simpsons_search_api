@@ -17,8 +17,7 @@ export default function TheSimpson() {
       const res = await fetch(`https://thesimpsonsapi.com/api/characters?page=${charater}`)
       const json = await res.json()
       console.log(json)
-      console.log(json.results.portrait_path
-      )
+      console.log(json.results.portrait_path)
       setData(json.results)
       setLoading(false)
     }
@@ -36,11 +35,11 @@ export default function TheSimpson() {
             <h2>{ch.name}</h2>
             <img src={`https://cdn.thesimpsonsapi.com/200${ch.portrait_path
               }`} alt={ch.name} />
-            <p>Ager: {ch.age}</p>
-            <p>Gender: {ch.gender}</p>
-            <p>Occupation: {ch.occupation}</p>
-            <p>Birthdate{ch.birthdate}</p>
-            <p>Status: {ch.status}</p>
+            <p><strong>Age: </strong> {ch.age}</p>
+            <p><strong>Gender: </strong>{ch.gender}</p>
+            <p><strong>Occupation: </strong>{ch.occupation}</p>
+            <p><strong>Birthdate: </strong>{ch.birthdate}</p>
+            <p><strong>Status: </strong>{ch.status}</p>
 
           </div>
         ))
