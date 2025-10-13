@@ -59,12 +59,19 @@ export default function TheSimpson() {
 
   })
 
+  const cutPhrase = (phrase, maxlengh = 50) => {
+    if (!phrase || phrase.length <= maxlengh) {
+      return phrase;
+    }
+    return phrase.substring(0, maxlengh) + '...';
+  };
+
   return (
     <>
       <main>
-      <div className="tittle">
-        <img src={logo} alt="The Simpson Logo" className="logo" />
-      </div>
+        <div className="tittle">
+          <img src={logo} alt="The Simpson Logo" className="logo" />
+        </div>
         <div className="searchContainer">
           <label htmlFor="search" >Search</label>
           <input
@@ -84,10 +91,12 @@ export default function TheSimpson() {
                 }`} alt={ch.name} />
               <p><strong>Age: </strong> {ch.age}</p>
               <p><strong>Gender: </strong>{ch.gender}</p>
-              <p><strong>Occupation: </strong>{ch.occupation}</p>
+              <p><strong>Occupation: </strong>{cutPhrase(ch.occupation)}</p>
               <p><strong>Birthdate: </strong>{ch.birthdate}</p>
-              <p><strong>Status: </strong>{ch.status}</p>
-
+              <p className="phrase"><strong>Phrases: </strong>{cutPhrase(ch.phrases[0])}</p>
+              <p>
+                <span className={ch.status === "Alive" ? "statusalive" : "statusdead"}>{ch.status}</span>
+              </p>
             </div>
           ))
           }

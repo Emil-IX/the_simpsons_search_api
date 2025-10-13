@@ -65,8 +65,8 @@ main {
 
 .card {
     /*  background-color: rgb(86, 193, 255); */
-    background-color: #ffd12d;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border: 1px solid #feef21;
     border-radius: 8px;
     margin: 10px;
     padding: 15px 40px;
@@ -86,10 +86,30 @@ main {
 }
 
 .card img {
-    border: 4px solid white;
+    border: 4px solid rgb(255, 229, 59);
     border-radius: 5px;
     background-image: url('./assets/cloud-background.jpg');
 
+}
+
+.statusalive {
+    color: rgb(21, 164, 21);
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(235, 244, 237);
+    padding: 2px 6px;
+    border-radius: 5px;
+    
+}
+
+.statusdead {
+    color: rgb(236, 45, 45);
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(255, 225, 225);
+    padding: 2px 6px;
+    border-radius: 5px;
+    
 }
 
 .pagination {
@@ -118,4 +138,12 @@ button {
     font-size: 20px;
     cursor: pointer;
     box-shadow:  5px  4px 2px  rgb(38, 71, 162)
+}
+
+
+.phrase {
+    font-style: italic;
+    font-size: 14px;
+    color: rgb(149, 137, 125);
+    font-weight: 500;
 }
