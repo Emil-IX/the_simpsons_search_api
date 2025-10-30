@@ -1,9 +1,9 @@
-### This is just a simple and fun practice
+# This is just a simple and fun practice
 
-## welcome
+### welcome
 
 ![sin1](public/sin1.png)
 
-## filter
+### filter
 
 ![sin2](public/sin2.png)
