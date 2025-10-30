@@ -88,7 +88,7 @@ export default function TheSimpson() {
             <div key={ch.id} className="card">
 
               <div className="card_head">
-                <h2>{ch.name}</h2>
+                <h2>{cutPhrase(ch.name,25)}</h2>
                 <div className="card_picture">
                   <img src={`https://cdn.thesimpsonsapi.com/200${ch.portrait_path
                     }`} alt={ch.name} />
