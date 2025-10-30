@@ -1,15 +1,14 @@
-
 body {
     background-color: rgb(94, 141, 251);
     /* background-image: url('assets/pngtree-a-vibrant-stylized-cityscape-at-dawn-with-pastel-colors-and-geometric-picture-image_16312399.jpg'); */
-    
+
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .tittle {
@@ -33,15 +32,14 @@ main {
     padding: 9px 10px;
     border-radius: 10px;
     width: 20em;
-    box-shadow:  5px  4px 2px  rgb(38, 71, 162)
-     
+    box-shadow: 5px 4px 2px rgb(38, 71, 162)
 }
 
 .searchContainer label {
     padding: 0 0 0 10px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
 }
 
 .search {
@@ -56,6 +54,8 @@ main {
     border-radius: 5px;
 }
 
+
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -65,31 +65,71 @@ main {
 
 .card {
     /*  background-color: rgb(86, 193, 255); */
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 300px;
+    gap: 2em;
+    margin: 10px;
+    padding: 5px 40px 25px;
     background-color: #ffffff;
     border: 1px solid #feef21;
     border-radius: 8px;
-    margin: 10px;
-    padding: 15px 40px;
-    width: 12.5rem;
-    box-shadow:  5px  4px 2px  rgb(38, 71, 162)
+    box-shadow: 5px 4px 2px rgb(38, 71, 162);
+    background-size: 30px 34px;
+    background-image: repeating-linear-gradient(0deg, #bac9ff, #bac9ff 1.4000000000000001px, #ffffff 1.4000000000000001px, #ffffff);
 }
 
-.card p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.card:hover {
+    gap: 3em;
+    border: 5px dashed rgb(177, 177, 166);
+    cursor: pointer;
 }
 
-.card h2 {
-    font-family: sans-serif;
+.card:hover .card_head h2 {
+    transform: rotate(-3deg);
+}
+
+.card:hover .card_picture img {
+    transform: rotate(-4deg);
+}
+
+.card:hover .card_texts {
+    transform: rotate(-4deg);
+}
+
+.card_head h2 {
+    font-family: cursive;
     text-align: center;
     font-size: 21px;
-
 }
 
-.card img {
+.card_texts {
+    margin-top: 35px;
+}
+
+.card_texts p {
+    font-family: cursive;
+    color: grey;
+}
+
+.card_texts strong {
+    color: black;
+}
+
+.phrase {
+    font-style: italic;
+    font-size: 14px;
+    color: rgb(149, 137, 125);
+    font-weight: 500;
+}
+
+
+.card_picture img {
     border: 4px solid rgb(255, 229, 59);
     border-radius: 5px;
     background-image: url('./assets/cloud-background.jpg');
-
+ 
 }
 
 .statusalive {
@@ -99,7 +139,7 @@ main {
     background-color: rgb(235, 244, 237);
     padding: 2px 6px;
     border-radius: 5px;
-    
+
 }
 
 .statusdead {
@@ -109,7 +149,7 @@ main {
     background-color: rgb(255, 225, 225);
     padding: 2px 6px;
     border-radius: 5px;
-    
+
 }
 
 .pagination {
@@ -127,7 +167,7 @@ main {
     background-color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    box-shadow:  5px  4px 2px  rgb(38, 71, 162)
+    box-shadow: 5px 4px 2px rgb(38, 71, 162)
 }
 
 button {
@@ -137,13 +177,5 @@ button {
     padding: 1px 5px;
     font-size: 20px;
     cursor: pointer;
-    box-shadow:  5px  4px 2px  rgb(38, 71, 162)
-}
-
-
-.phrase {
-    font-style: italic;
-    font-size: 14px;
-    color: rgb(149, 137, 125);
-    font-weight: 500;
+    box-shadow: 5px 4px 2px rgb(38, 71, 162)
 }

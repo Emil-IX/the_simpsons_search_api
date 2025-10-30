@@ -86,17 +86,26 @@ export default function TheSimpson() {
         <div className="container">
           {!loading && findCard.map((ch) => (
             <div key={ch.id} className="card">
-              <h2>{ch.name}</h2>
-              <img src={`https://cdn.thesimpsonsapi.com/200${ch.portrait_path
-                }`} alt={ch.name} />
-              <p><strong>Age: </strong> {ch.age}</p>
-              <p><strong>Gender: </strong>{ch.gender}</p>
-              <p><strong>Occupation: </strong>{cutPhrase(ch.occupation)}</p>
-              <p><strong>Birthdate: </strong>{ch.birthdate}</p>
-              <p className="phrase"><strong>Phrases: </strong>{cutPhrase(ch.phrases[0])}</p>
-              <p>
-                <span className={ch.status === "Alive" ? "statusalive" : "statusdead"}>{ch.status}</span>
-              </p>
+
+              <div className="card_head">
+                <h2>{ch.name}</h2>
+                <div className="card_picture">
+                  <img src={`https://cdn.thesimpsonsapi.com/200${ch.portrait_path
+                    }`} alt={ch.name} />
+                </div>
+              </div>
+
+              <div className="card_texts">
+                <p><strong>Age: </strong> {ch.age ? ch.age :'unknown'}</p>
+                <p><strong>Gender: </strong>{(ch.gender) ? ch.gender :'unknown'}</p>
+                <p><strong>Occupation: </strong>{cutPhrase(ch.occupation ? ch.occupation :'unknown',40)}</p>
+                <p><strong>Birthdate: </strong>{ch.birthdate ? ch.birthdate :'unknown'}</p>
+                <p className="phrase"><span>Phrases: </span>{cutPhrase( ch.phrases[0] ? ch.phrases[0] :'unknown',40)}</p>
+                <p>
+                  <span className={ch.status === "Alive" ? "statusalive" : "statusdead"}>{ch.status ? ch.status :'unknown'}</span>
+                </p>
+
+              </div>
             </div>
           ))
           }
